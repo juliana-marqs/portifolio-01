@@ -1,0 +1,158 @@
+html{
+    font-family: var(--fonte-padrao);
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+}
+
+.header{
+    margin: 10px;
+    padding: 5px;
+}
+
+.header .cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    max-width: 170px;
+}
+
+.header .nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .nav ul li {
+    font-size: 18px;
+    font-family: var(--fonte-titulo);
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.header .nav ul li a{
+    padding: 10px;
+}
+
+.header .nav ul li a:hover{
+    background-color: var(--rosa-claro);
+    color: #000;
+    border-radius: 30px;
+}
+
+.main{
+    max-width: 100%;
+}
+
+.main .inicio{
+    display: flex;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    background: url(../imagens/bg-desktop.png) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main .inicio:after{
+    content: url('../imagens/seta-rosa.png');
+    position: absolute;
+    height: 35px;
+    bottom: 20px;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes downarrow {
+    0% { -webkit-transform: translateY(0); opacity: 0.4;}
+    100% { -webkit-transform: translateY(0.4em); opacity: 0.9;}
+}
+
+.main .foto-perfil{
+    max-width: 50%;
+    border-radius: 0 50px 0 0;
+}
+
+.main .mensagem{
+    max-width: 50%;
+}
+
+.main .mensagem h1{
+    font-size: 35px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    padding: 20px 0 15px 0;
+}
+
+.main .mensagem p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main .mensagem .skills{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main .mensagem .skills img{
+    max-width: 100px;
+    margin: 20px;
+}
+
+@media (max-width: 768px){
+    .main .inicio {
+        flex-direction: column;
+        background-image: url(../imagens/bg-mobile.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 15px;
+    }
+}
+
+/*Sobre Mim*/
+
+.main .sobre{
+    display: flex;
+    margin: 20px;
+    padding: 25px;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+}
+
+.main .sobre .sobre-mim{
+    max-width: 50%;
+}
+
+.main .sobre .sobre-mim h2{
+    font-family: var(--fonte-titulo);
+    font-size: 30px;
+    font-variant: small-caps;
+    padding: 5px 0 15px;
+}
+
+.main .sobre .sobre-mim p{
+    padding: 5px 15px;
+    text-align: justify;
+    text-indent: 10px;
+}
+
+.main .sobre img{
+    max-width: 400px;
+}
+
+@media(max-width: 768px) {
+    .main .sobre{
+        flex-direction: column;
+    }
+
+    .main .sobre .sobre-mim{
+        padding-bottom: 15px;
+    }
+}

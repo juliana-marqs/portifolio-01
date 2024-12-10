@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Parkinsans:wght@300..800&display=swap');
+
+:root{
+    --fonte-titulo: "Parkinsans", sans-serif;
+    --fonte-padrao: "Ojuju", sans-serif;
+    --cor-de-fundo: #1e0b15;
+    --detalhes: #504548;
+    --rosa-claro: #ffdefc;
+}
