@@ -77,7 +77,9 @@ body{
 }
 
 .main .foto-perfil{
-    border-radius: 0 50px 0 0;
+    border-radius: 50px;
+    max-width: 100%;
+    width: 400px;
 }
 
 .main .foto-perfil, .main .mensagem{
@@ -93,7 +95,7 @@ body{
 }
 
 .main .mensagem p{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
     text-align: justify;
 }
@@ -151,6 +153,7 @@ body{
     padding: 5px 15px;
     text-align: justify;
     text-indent: 10px;
+    font-size: 20px;
 }
 
 .main .sobre img{
@@ -188,6 +191,7 @@ body{
     padding: 30px;
     flex-wrap: wrap;
     width: 90%;
+    margin: auto;
 }
 
 .main .servicos ul li{
@@ -254,7 +258,7 @@ body{
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -264,6 +268,7 @@ body{
     align-items: center;
     width: 300px;
     max-width: 90%;
+    height: auto;
 }
 
 .main .projetos .sites img{
@@ -293,7 +298,42 @@ body{
 }
 
 @media(max-width: 768px) {
-    .main .projetos h2{
+     .main .projetos h2{
         text-align: center;
     }
+}
+
+.main .mensagem-final{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    font-size: 20px;
+    font-family: var(--fonte-titulo);
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.397);
+    background-color: var(--detalhes);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.544);
+}
+
+.contato{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px 10px 20px;
+}
+
+.contato img{
+    max-width: 150px;
+}
+
+.contato .redes a{
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.contato .redes a:hover{
+    font-size: 27px;
 }
