@@ -45,19 +45,22 @@ body{
     border-radius: 30px;
 }
 
-.main{
-    max-width: 100%;
+@media(max-width: 768px){
+    .header .cabecalho{
+        flex-direction: column;
+        padding: 5px;
+    }
 }
 
 .main .inicio{
     display: flex;
-    padding: 15px;
+    padding: 55px;
     justify-content: space-around;
     align-items: center;
-    height: 80vh;
     background: url(../imagens/bg-desktop.png) center center no-repeat;
     background-size: cover;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .main .inicio:after{
@@ -74,11 +77,10 @@ body{
 }
 
 .main .foto-perfil{
-    max-width: 50%;
     border-radius: 0 50px 0 0;
 }
 
-.main .mensagem{
+.main .foto-perfil, .main .mensagem{
     max-width: 50%;
 }
 
@@ -87,11 +89,13 @@ body{
     font-family: var(--fonte-titulo);
     font-weight: 600;
     padding: 20px 0 15px 0;
+    text-align: center;
 }
 
 .main .mensagem p{
     font-size: 20px;
     font-weight: 500;
+    text-align: justify;
 }
 
 .main .mensagem .skills{
@@ -112,6 +116,11 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         padding-bottom: 15px;
+        gap: 15px;
+    }
+
+    .main .inicio .mensagem{
+        max-width: 80%;
     }
 }
 
@@ -123,14 +132,15 @@ body{
     padding: 25px;
     justify-content: space-around;
     align-items: center;
-    height: 60vh;
+    height: auto;
+    max-width: 90%;
 }
 
 .main .sobre .sobre-mim{
-    max-width: 50%;
+    max-width: 80%;
 }
 
-.main .sobre .sobre-mim h2{
+.main .sobre .sobre-mim h2, .main .servicos h2, .main .projetos h2{
     font-family: var(--fonte-titulo);
     font-size: 30px;
     font-variant: small-caps;
@@ -145,14 +155,145 @@ body{
 
 .main .sobre img{
     max-width: 400px;
+    padding-left: 20px;
 }
 
 @media(max-width: 768px) {
     .main .sobre{
         flex-direction: column;
+        text-align: center;
+    }
+
+    .main .sobre img{
+        max-width: 80%;
     }
 
     .main .sobre .sobre-mim{
         padding-bottom: 15px;
+    }
+}
+
+.main .servicos{
+    padding: 30px;
+    background-image: url(../imagens/bg-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.main .servicos ul{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 30px;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.main .servicos ul li{
+    width: 90%;
+    max-width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: var(--detalhes);
+    border-radius: 10%;
+}
+
+.main .servicos ul li img{
+    max-width: 60px;
+    padding: 5px;
+}
+
+.main .servicos ul li h3{
+    font-size: 20px;
+    padding: 15px;
+    font-family: var(--fonte-titulo);
+    font-weight: 500;
+    text-align: center;
+}
+
+.main .servicos ul li p{
+    margin: 5px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+@media(max-width: 768px){
+    .main .servicos{
+        background-image: url(../imagens/bg-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .main .servicos h2{
+        text-align: center;
+    }
+    
+    .main .servicos ul {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.main .projetos{
+    margin: 40px auto;
+    padding: 15px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .projetos .trabalhos{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .projetos .sites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    max-width: 90%;
+}
+
+.main .projetos .sites img{
+    max-width: 100%;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.main .projetos .sites .descricao-projeto{
+    font-size: 18px;
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+}
+
+.main .projetos .sites a{
+    padding: 10px;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.main .projetos .sites a:hover{
+    background-color: var(--rosa-claro);
+    cursor: pointer;
+    border-radius: 10px;
+    color: #000;
+}
+
+@media(max-width: 768px) {
+    .main .projetos h2{
+        text-align: center;
     }
 }
